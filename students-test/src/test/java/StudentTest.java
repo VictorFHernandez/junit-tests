@@ -19,7 +19,7 @@ public class StudentTest {
 
     @Test
     public void testAddGrade(){
-        Student albert = new Student(1L, "albert");
+        Student albert = new Student(3, "albert");
         assertEquals(0, albert.getGrade().size());
         albert.addGrade(100);
         assertEquals(1, albert.getGrade().size());
@@ -27,4 +27,15 @@ public class StudentTest {
         assertEquals(2, albert.getGrade().size());
     }
 
+    @Test
+    public void testGetGradeAverage(){
+        Student carl = new Student(4, "carl");
+        carl.addGrade(75);
+        carl.addGrade(85);
+        assertEquals(80, carl.getGradeAverage(), 0);
+        carl.addGrade(65);
+        carl.addGrade(92);
+        assertEquals(79.25, carl.getGradeAverage(), 0);
+        assertEquals(79.65, carl.getGradeAverage(), 0.5);
+    }
 }

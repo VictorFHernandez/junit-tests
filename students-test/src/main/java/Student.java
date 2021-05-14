@@ -26,4 +26,12 @@ public class Student {
     public ArrayList<Integer> getGrade() {
         return grades;
     }
+
+    public double getGradeAverage() {
+        double total = 0;
+        for(int average : this.grades){
+            total += average;
+        }
+        return total / this.grades.size();
+    }
 }
