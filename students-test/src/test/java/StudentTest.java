@@ -8,8 +8,8 @@ public class StudentTest {
     @Test
     public void testCreateStudent(){
         victor = new Student(1, "victor");
-        assertEquals(victor, victor);
 
+        assertEquals(1, victor.getId());
     }
 
 }
