@@ -30,9 +30,9 @@ public class Student {
 
     public double getGradeAverage() {
         double sum = 0;
-        for (int grade: this.grades) {
+        for (int grade : this.grades) {
             sum += grade;
         }
-        return sum / this.grades.size() ;
+        return sum / this.grades.size();
     }
 }

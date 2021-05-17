@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class StudentTest {
     @Test
-    public void testCreateStudent(){
+    public void testCreateStudent() {
         Student fer = new Student(1L, "fer");
         Student ryan = null;
         assertNull(ryan);
@@ -14,7 +14,7 @@ public class StudentTest {
     }
 
     @Test
-    public void testStudentFields(){
+    public void testStudentFields() {
         Student fer = new Student(1L, "fer");
         assertSame(1L, fer.getId());
         assertSame("fer", fer.getName());
@@ -23,7 +23,7 @@ public class StudentTest {
 
 
     @Test
-    public void testAddGrade(){
+    public void testAddGrade() {
         Student fer = new Student(1L, "fer");
         fer.addGrade(100);
         assertSame(100, fer.getGrades().get(0));
@@ -32,7 +32,7 @@ public class StudentTest {
     }
 
     @Test
-    public void testAverageGrade(){
+    public void testAverageGrade() {
         Student fer = new Student(1L, "fer");
         fer.addGrade(100);
         fer.addGrade(80);
